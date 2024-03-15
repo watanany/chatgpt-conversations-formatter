@@ -1,0 +1,30 @@
+[project]
+name = "conversations-formatter"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Watanabe Shingo", email = "s1170087@gmail.com" }
+]
+dependencies = [
+    "toolz>=0.12.1",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ipython>=8.22.2",
+    "black>=24.2.0",
+    "see>=1.4.1",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/conversations_formatter"]
